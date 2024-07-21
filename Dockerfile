@@ -1,6 +1,7 @@
 # Grab base Alpine
 FROM alpine:3.17.1
-LABEL author="atunnecliffe <andrew@atunnecliffe.com>"
+# Forked from the hard work of "atunnecliffe <andrew@atunnecliffe.com>"
+LABEL author="vidkun <code@vlfservices.com>"
 
 # Set environment variables
 ENV HOME /root
@@ -11,7 +12,7 @@ ENV LANG en_GB.UTF-8
 ENV LANGUAGE en_GB.UTF-8
 
 # ARGS
-ARG DOWNLOAD_TARGET=https://download.splunk.com/products/splunk/releases/9.0.3/linux/splunk-9.0.3-dd0128b1f8cd-Linux-x86_64.tgz
+ARG DOWNLOAD_TARGET=https://download.splunk.com/products/splunk/releases/9.2.2/linux/splunk-9.2.2-d76edf6f0a15-Linux-x86_64.tgz
 ARG SPLUNK_CLI_ARGS="--accept-license --no-prompt"
 ARG ADMIN_PASSWORD=changeme2019
 ARG TZ=Etc/UTC
